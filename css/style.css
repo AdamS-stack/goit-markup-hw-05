@@ -738,7 +738,7 @@
     left: 0;
     top: 0;
     background-color: var(--backdrop-transparency);
-    transition: transform 0.25s;
+    transition: transform var(--transition);
     display: flex;
 }
 .is-hidden {
