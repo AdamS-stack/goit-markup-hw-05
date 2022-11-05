@@ -28,7 +28,7 @@
     --border-radius: 4px;
     --linear-gradient: rgba(47, 48, 58, 0.4);
     --background-color8: rgba(47, 48, 58, 0.8);
-    --transition: 255ms;
+    --transition: 250ms;
     --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .body {
@@ -104,56 +104,64 @@
     gap: 10px;
     align-items: center;
     color: var(--color-text1);
-    transition: color var(--transition);
-    transition-timing-function: var(--transition-timing-function);
+    fill: var(--color-text1);
+    transition: color var(--transition) var(--transition-timing-function),
+        var(--transition) var(--transition-timing-function);
 }
 .mail-link:hover {
     color: var(--color-text3);
-    stroke: var(--color-text3);
+    fill: var(--color-text3);
 }
 
 .tel-link {
     text-decoration: none;
     color: var(--color-text1);
+    fill: var(--color-text1);
+
     display: flex;
     flex-direction: row-reverse;
     gap: 5px;
     align-items: center;
-    transition: color var(--transition);
-    transition-timing-function: var(--transition-timing-function);
+    transition: color var(--transition) var(--transition-timing-function),
+        var(--transition) var(--transition-timing-function);
 }
 .tel-link:hover {
     color: var(--color-text3);
-    stroke: var(--color-text3);
+    fill: var(--color-text3);
 }
+
 .mail-portfolio {
     text-decoration: none;
     color: var(--color-text1);
+    fill: var(--color-text1);
+
     display: flex;
     flex-direction: row-reverse;
     gap: 10px;
     align-items: center;
-    transition: color var(--transition);
-    transition-timing-function: var(--transition-timing-function);
+    transition: color var(--transition) var(--transition-timing-function),
+        var(--transition) var(--transition-timing-function);
 }
 .mail-portfolio:hover {
     color: var(--color-text3);
-    stroke: var(--color-text3);
+    fill: var(--color-text3);
 }
 
 .tel-portfolio {
     text-decoration: none;
     color: var(--color-text1);
+    fill: var(--color-text1);
+
     display: flex;
     flex-direction: row-reverse;
     gap: 5px;
     align-items: center;
-    transition: color var(--transition);
-    transition-timing-function: var(--transition-timing-function);
+    transition: color var(--transition) var(--transition-timing-function),
+        var(--transition) var(--transition-timing-function);
 }
 .tel-portfolio:hover {
     color: var(--color-text3);
-    stroke: var(--color-text3);
+    fill: var(--color-text3);
 }
 .menu {
     display: flex;
@@ -391,6 +399,7 @@
 .mail-footer-portfolio {
     text-decoration: none;
     color: var(--color-text6);
+    text-decoration: underline;
 }
 .tel-footer-portfolio {
     text-decoration: none;
@@ -411,8 +420,8 @@
     color: var(--color-text2);
     padding: 6px 22px;
     border-radius: var(--border-radius);
-    transition: color var(--transition);
-    transition-timing-function: var(--transition-timing-function);
+    transition: color var(--transition) var(--transition-timing-function),
+        background-color var(--transition) var(--transition-timing-function);
 }
 .nav-all:hover {
     background-color: var(--color-text3);
@@ -429,8 +438,8 @@
     color: var(--color-text2);
     padding: 6px 22px;
     border-radius: var(--border-radius);
-    transition: color var(--transition);
-    transition-timing-function: var(--transition-timing-function);
+    transition: color var(--transition) var(--transition-timing-function),
+        background-color var(--transition) var(--transition-timing-function);
 }
 .nav-pages:hover {
     background-color: var(--color-text3);
@@ -447,8 +456,8 @@
     color: var(--color-text2);
     padding: 6px 22px;
     border-radius: var(--border-radius);
-    transition: color var(--transition);
-    transition-timing-function: var(--transition-timing-function);
+    transition: color var(--transition) var(--transition-timing-function),
+        background-color var(--transition) var(--transition-timing-function);
 }
 .nav-aplications:hover {
     background-color: var(--color-text3);
@@ -465,8 +474,8 @@
     color: var(--color-text2);
     padding: 6px 22px;
     border-radius: var(--border-radius);
-    transition: color var(--transition);
-    transition-timing-function: var(--transition-timing-function);
+    transition: color var(--transition) var(--transition-timing-function),
+        background-color var(--transition) var(--transition-timing-function);
 }
 .nav-design:hover {
     background-color: var(--color-text3);
@@ -483,8 +492,8 @@
     color: var(--color-text2);
     padding: 6px 22px;
     border-radius: var(--border-radius);
-    transition: color var(--transition);
-    transition-timing-function: var(--transition-timing-function);
+    transition: color var(--transition) var(--transition-timing-function),
+        background-color var(--transition) var(--transition-timing-function);
 }
 .nav-marketing:hover {
     background-color: var(--color-text3);
@@ -504,8 +513,8 @@
     margin-left: 15px;
     cursor: pointer;
     transform: translateY(0);
-    transition: transform var(--transition);
-    transition-timing-function: var(--transition-timing-function);
+    transition: transform var(--transition) var(--transition-timing-function);
+    transition: box-shadow var(--transition) var(--transition-timing-function);
 }
 .card:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -587,37 +596,26 @@
     width: 106px;
     height: 60px;
 }
-
+.icon-header {
+    transition: fill color var(--transition);
+}
 .customer-icon {
     cursor: pointer;
     border: 1px solid var(--border-color2);
     display: flex;
     padding: 16px 32px;
+    fill: var(--color-text7);
 
     border-radius: 4px;
-    transition: color var(--transition), border var(--transition);
-    transition-timing-function: var(--transition-timing-function);
+    transition: fill var(--transition) var(--transition-timing-function),
+        border-color var(--transition) var(--transition-timing-function);
 }
 
 .customer-icon:hover {
     border: 1px solid var(--border-color3);
-    --color1: var(--color-text3);
+    fill: var(--color-text3);
 }
-.customer-icon-4 {
-    cursor: pointer;
-    border: 1px solid var(--border-color2);
-    display: flex;
-    padding: 16px 32px;
-    --color2: var(--color-text7);
 
-    border-radius: 4px;
-    transition: color var(--transition), border var(--transition);
-    transition-timing-function: var(--transition-timing-function);
-}
-.customer-icon-4:hover {
-    border: 1px solid var(--border-color3);
-    --color2: var(--color-text3);
-}
 .icon-list {
     display: flex;
     text-align: center;
@@ -639,8 +637,8 @@
     justify-content: center;
     background-color: var(--background-color);
     border-radius: 50%;
-    transition: color var(--transition);
-    transition-timing-function: var(--transition-timing-function);
+    transition: background-color var(--transition)
+        var(--transition-timing-function);
 }
 .icon-link:hover {
     background-color: var(--background-color6);
@@ -665,8 +663,8 @@
     background-color: var(--backgraund-color7);
     justify-content: center;
     border-radius: 50%;
-    transition: color var(--transition);
-    transition-timing-function: var(--transition-timing-function);
+    transition: background-color var(--transition)
+        var(--transition-timing-function);
 }
 .icon-link-footer:hover {
     background-color: var(--background-color6);
