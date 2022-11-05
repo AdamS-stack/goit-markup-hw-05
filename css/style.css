@@ -106,7 +106,7 @@
     color: var(--color-text1);
     fill: var(--color-text1);
     transition: color var(--transition) var(--transition-timing-function),
-        var(--transition) var(--transition-timing-function);
+        fill var(--transition) var(--transition-timing-function);
 }
 .mail-link:hover {
     color: var(--color-text3);
@@ -123,7 +123,7 @@
     gap: 5px;
     align-items: center;
     transition: color var(--transition) var(--transition-timing-function),
-        var(--transition) var(--transition-timing-function);
+        fill var(--transition) var(--transition-timing-function);
 }
 .tel-link:hover {
     color: var(--color-text3);
@@ -140,7 +140,7 @@
     gap: 10px;
     align-items: center;
     transition: color var(--transition) var(--transition-timing-function),
-        var(--transition) var(--transition-timing-function);
+        fill var(--transition) var(--transition-timing-function);
 }
 .mail-portfolio:hover {
     color: var(--color-text3);
@@ -157,7 +157,7 @@
     gap: 5px;
     align-items: center;
     transition: color var(--transition) var(--transition-timing-function),
-        var(--transition) var(--transition-timing-function);
+        fill var(--transition) var(--transition-timing-function);
 }
 .tel-portfolio:hover {
     color: var(--color-text3);
@@ -513,8 +513,8 @@
     margin-left: 15px;
     cursor: pointer;
     transform: translateY(0);
-    transition: transform var(--transition) var(--transition-timing-function);
-    transition: box-shadow var(--transition) var(--transition-timing-function);
+    transition: transform var(--transition) var(--transition-timing-function),
+        box-shadow var(--transition) var(--transition-timing-function);
 }
 .card:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -635,14 +635,16 @@
     height: 44px;
     align-items: center;
     justify-content: center;
+    fill: var(--color-text7);
     background-color: var(--background-color);
     border-radius: 50%;
     transition: background-color var(--transition)
-        var(--transition-timing-function);
+            var(--transition-timing-function),
+        fill var(--transition) var(--transition-timing-function);
 }
 .icon-link:hover {
     background-color: var(--background-color6);
-    --color3: var(--color-text5);
+    fill: var(--color-text5);
 }
 .social-icon-footer {
     display: flex;
